@@ -22,6 +22,8 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -39,7 +41,7 @@ body {
 body::after {
   content: "";
   position: fixed;
-  inset: -50%;
+  inset: 0;
   z-index: 40;
   pointer-events: none;
   opacity: 0.05;
@@ -309,6 +311,8 @@ body.loaded .line-2 .line-in { transition-delay: 0.12s; }
 /* ── MARQUEE ─────────────────────────────── */
 .marquee {
   overflow: hidden;
+  /* iOS 사파리가 숨겨진 초과 폭을 줌 캔버스에 포함하는 것 방지 */
+  contain: paint;
   border-block: 1px solid var(--line);
   padding-block: clamp(14px, 2vw, 26px);
   background: var(--bg-2);
