@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>김기현 — Physique &amp; Combat Filmmaker</title>
+  <meta name="description" content="강함을 만드는 사람들의 세계를 가장 가까이에서 기록해온 필름메이커 김기현. 다큐멘터리 시리즈, 브랜드 캠페인, 버티컬 콘텐츠 — 서울.">
+  <meta property="og:title" content="KIM KIHYUN — 김기현">
+  <meta property="og:description" content="Physique &amp; Combat Filmmaker — 다큐멘터리 · 브랜드 캠페인 · 버티컬. Seoul.">
+  <meta property="og:image" content="https://halftoneharmony.github.io/assets/posters/warriors.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://halftoneharmony.github.io">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KIM KIHYUN — 김기현">
+  <meta name="twitter:description" content="Physique &amp; Combat Filmmaker — 다큐멘터리 · 브랜드 캠페인 · 버티컬. Seoul.">
+  <meta name="twitter:image" content="https://halftoneharmony.github.io/assets/posters/warriors.jpg">
+  <meta name="theme-color" content="#0b0b0c">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"김기현","alternateName":"Kim Kihyun","jobTitle":"Filmmaker","address":{"@type":"PostalAddress","addressLocality":"Seoul","addressCountry":"KR"},"knowsAbout":["Bodybuilding","Sports Film","Documentary","Brand Campaign"]}
+  </script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='12'%20fill='%230b0b0c'/%3E%3Ctext%20x='30'%20y='45'%20font-family='Arial Black,Arial'%20font-size='34'%20font-weight='900'%20fill='%23edeae4'%20text-anchor='middle'%3EK%3C/text%3E%3Ccircle%20cx='52'%20cy='15'%20r='6'%20fill='%23e13b2c'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- 커서 (데스크탑 전용) -->
+  <div class="cursor" id="cursor" aria-hidden="true"><span id="cursorLabel"></span></div>
+
+  <!-- 스크롤 진행바 -->
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- ───────── NAV ───────── -->
+  <header class="nav" id="nav">
+    <a class="nav-logo" href="#top">KIM KIHYUN<span class="logo-dot"></span></a>
+    <nav class="nav-links" aria-label="주 메뉴">
+      <a href="#docs">DOCS</a>
+      <a href="#films">FILMS</a>
+      <a href="#stills">STILLS</a>
+      <a href="#about">ABOUT</a>
+    </nav>
+    <button class="nav-menu-btn mono" id="menuBtn" aria-expanded="false" aria-controls="menuOverlay">MENU</button>
+  </header>
+
+  <!-- 모바일 오버레이 메뉴 -->
+  <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+    <nav class="menu-list" aria-label="모바일 메뉴">
+      <a href="#docs"><em class="mono">01</em>DOCS</a>
+      <a href="#films"><em class="mono">02</em>FILMS</a>
+      <a href="#stills"><em class="mono">03</em>STILLS</a>
+      <a href="#about"><em class="mono">04</em>ABOUT</a>
+    </nav>
+    <p class="menu-foot mono">KIM KIHYUN — SEOUL, KR</p>
+  </div>
+
+  <!-- ───────── HERO ───────── -->
+  <section class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-art"></div>
+      <!-- 히어로 배경 릴: assets/reel.mp4 교체 가능 (무음·루프) -->
+      <video class="hero-video" src="assets/reel.mp4" autoplay muted loop playsinline></video>
+      <div class="hero-shade"></div>
+    </div>
+    <div class="hero-inner">
+      <p class="hero-kicker mono"><span class="dot" aria-hidden="true"></span>FILMMAKER — PHYSIQUE &amp; COMBAT<span class="hero-kicker-loc">SEOUL, KR</span></p>
+      <h1 class="hero-name">
+        <span class="line"><span class="line-in">KIM</span></span>
+        <span class="line line-2"><span class="line-in">KIHYUN</span></span>
+      </h1>
+      <div class="hero-foot">
+        <p class="hero-ko">강함을 만드는 사람들의 세계를 가장 가까이에서 기록해온 필름메이커.<br>움직임의 멋을 아는 크리에이티브 파트너.</p>
+        <a class="hero-scroll mono" href="#docs" data-cursor-skip>SCROLL<span aria-hidden="true">&nbsp;↓</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── MARQUEE ───────── -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="mq">BODYBUILDING<i>✦</i>DOCUMENTARY<i>✦</i>BRAND CAMPAIGN<i>✦</i>SOCIAL CONTENT<i>✦</i>COMBAT SPORTS<i>✦</i></span>
+      <span class="mq">BODYBUILDING<i>✦</i>DOCUMENTARY<i>✦</i>BRAND CAMPAIGN<i>✦</i>SOCIAL CONTENT<i>✦</i>COMBAT SPORTS<i>✦</i></span>
+    </div>
+  </div>
+
+  <!-- ───────── 01 DOCUMENTARY ───────── -->
+  <section class="section" id="docs">
+    <header class="sec-head rv">
+      <p class="sec-num mono">01 — DOCUMENTARY SERIES</p>
+      <h2 class="sec-title">THE DOCS</h2>
+      <p class="sec-sub">프리덤 애슬레틱 다큐멘터리 시리즈 — 유튜브 공개작 · 카드를 누르면 링크가 열립니다</p>
+      <p class="sec-credit mono">ALL EPISODES — PLANNED · DIRECTED · SHOT · EDITED · COLOR GRADED BY KIM KIHYUN</p>
+    </header>
+
+    <div class="films">
+
+      <article class="film film--wide rv" data-video="https://youtu.be/HzbyxMRsPoI" data-title="THE WARRIORS — 2024 올림피아" data-credit="촬영 2인 팀 · 파이널 스테이지·아카이브 외 전 파트 직접 촬영">
+        <button class="card-media r219" data-cursor="LINK" aria-label="더 워리어스 — 2024 올림피아 다큐멘터리 유튜브 링크 열기">
+          <img src="assets/posters/warriors.jpg" alt="라스베가스 야경 항공 — 더 워리어스 다큐멘터리" loading="eager">
+          <span class="card-tag mono">EP.03 — YOUTUBE</span>
+        </button>
+        <div class="film-meta">
+          <h3 class="film-title">THE WARRIORS — 2024 올림피아</h3>
+          <p class="film-sub"><span class="kr">미스터 올림피아 원정 다큐멘터리 — 라스베가스</span><span class="mono">DOCUMENTARY — 2024</span><span class="credit">촬영 2인 팀 — 파이널 스테이지·아카이브 외 전 파트 직접 촬영</span></p>
+        </div>
+      </article>
+
+      <article class="film film--h rv" data-video="https://youtu.be/AWfC8OLCC-U" data-title="TEAMWORK — 워너비즈 × 김성욱">
+        <button class="card-media r169" data-cursor="LINK" aria-label="팀워크 다큐멘터리 유튜브 링크 열기">
+          <img src="assets/posters/teamwork.jpg" alt="몬스터짐 무대 비키니 라인업 — 팀워크 다큐멘터리" loading="lazy">
+          <span class="card-tag mono">EP.04 — YOUTUBE</span>
+        </button>
+        <div class="film-meta">
+          <h3 class="film-title">TEAMWORK — 워너비즈 × 김성욱</h3>
+          <p class="film-sub"><span class="kr">팀 다큐멘터리 — AGP 프로 쇼</span><span class="mono">DOCUMENTARY — 2025</span></p>
+        </div>
+      </article>
+
+      <article class="film film--h rv" data-video="https://youtu.be/tsQ20kuTyFM" data-title="LEGACY — 키온 피어슨" data-credit="촬영 2인 팀 · 인터뷰와 NEWTECHGYM 파트 직접 촬영">
+        <button class="card-media r169" data-cursor="LINK" aria-label="레거시 — 키온 피어슨 다큐멘터리 유튜브 링크 열기">
+          <img src="assets/posters/legacy.jpg" alt="어두운 문가에서 백 더블 바이셉스 — 레거시 다큐멘터리" loading="lazy">
+          <span class="card-tag mono">EP.05 — YOUTUBE</span>
+        </button>
+        <div class="film-meta">
+          <h3 class="film-title">LEGACY — 키온 피어슨</h3>
+          <p class="film-sub"><span class="kr">애슬리트 다큐멘터리</span><span class="mono">DOCUMENTARY — 2025</span><span class="credit">촬영 2인 팀 — 인터뷰 · NEWTECHGYM 파트 직접 촬영</span></p>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- 다큐멘터리 필름 스틸 (가로 스크롤) -->
+    <div class="docstrip rv">
+      <p class="docstrip-label mono">FILM STILLS — 다큐멘터리 스틸<span class="docstrip-note">옆으로 넘겨 보세요</span></p>
+      <div class="docstrip-track">
+        <button class="dstill" data-cursor="VIEW" data-caption="삼손 다우다 — 라스베가스"><img src="assets/docstills/d01.jpg" alt="사막에서 흰 티셔츠로 앉아 있는 삼손 다우다" loading="lazy"></button>
+        <button class="dstill" data-cursor="VIEW" data-caption="박재훈 — ON STAGE"><img src="assets/docstills/d02.jpg" alt="무대 위 모스트 머스큘러 포즈의 박재훈" loading="lazy"></button>
+        <button class="dstill" data-cursor="VIEW" data-caption="LEGACY — 키온"><img src="assets/docstills/d03.jpg" alt="어두운 문가에서 모스트 머스큘러 — 레거시" loading="lazy"></button>
+        <button class="dstill" data-cursor="VIEW" data-caption="이윤성"><img src="assets/docstills/d04.jpg" alt="케이블 크로스오버 중인 이윤성" loading="lazy"></button>
+        <button class="dstill" data-cursor="VIEW" data-caption="키온 — 트레이닝"><img src="assets/docstills/d05.jpg" alt="인클라인 프레스에서 포효하는 키온" loading="lazy"></button>
+        <button class="dstill" data-cursor="VIEW" data-caption="워너비즈"><img src="assets/docstills/d06.jpg" alt="핑크 조명 짐에서 포즈를 취한 워너비즈 선수" loading="lazy"></button>
+        <button class="dstill" data-cursor="VIEW" data-caption="TEAMWORK — AGP 프로 쇼"><img src="assets/docstills/d07.jpg" alt="AGP 무대 위 단체 사진" loading="lazy"></button>
+        <button class="dstill" data-cursor="VIEW" data-caption="2024 올림피아 엑스포"><img src="assets/docstills/d09.jpg" alt="붉은 텐트 아래 엑스포 인파" loading="lazy"></button>
+        <button class="dstill" data-cursor="VIEW" data-caption="키온 — BACK"><img src="assets/docstills/d10.jpg" alt="흰 탱크톱 뒷모습의 키온" loading="lazy"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── 02 FILMS ───────── -->
+  <section class="section" id="films">
+    <header class="sec-head rv">
+      <p class="sec-num mono">02 — SELECTED WORKS</p>
+      <h2 class="sec-title">FILMS</h2>
+      <p class="sec-sub">브랜드 캠페인 · 트레이닝 필름 · 버티컬 콘텐츠</p>
+      <p class="sec-credit mono">ALL WORKS — PLANNED · DIRECTED · SHOT · EDITED · COLOR GRADED BY KIM KIHYUN</p>
+    </header>
+
+    <div class="films">
+
+      <article class="film film--wide rv" data-video="assets/films/zeroto.mp4" data-title="ZERO TO HERO — 2025 CAMPAIGN" data-credit="촬영 — 2인 팀">
+        <button class="card-media r219" data-cursor="PLAY" aria-label="제로투히어로 2025 캠페인 재생">
+          <img src="assets/posters/zeroto.jpg" alt="케이블 크로스오버 — 제로투히어로 캠페인 스틸" loading="lazy">
+          <video src="assets/previews/zeroto_p.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+          <span class="card-tag mono">BRAND CAMPAIGN</span>
+        </button>
+        <div class="film-meta">
+          <h3 class="film-title">ZERO TO HERO — 2025 CAMPAIGN</h3>
+          <p class="film-sub"><span class="kr">브랜드 캠페인 — 삼손 · 재훈 · 키온</span><span class="mono">0'56" — 2025</span><span class="credit">촬영 — 2인 팀</span></p>
+        </div>
+      </article>
+
+      <article class="film film--l rv" data-video="assets/films/justin.mp4" data-title="JUSTIN HARVEY — CROSSFIT" data-credit="촬영 — 2인 팀">
+        <button class="card-media r169" data-cursor="PLAY" aria-label="저스틴 하비 크로스핏 트레이닝 재생">
+          <img src="assets/posters/justin.jpg" alt="야외에서 어썰트 바이크를 타는 저스틴 하비" loading="lazy">
+          <video src="assets/previews/justin_p.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+          <span class="card-tag mono">TRAINING FILM</span>
+        </button>
+        <div class="film-meta">
+          <h3 class="film-title">JUSTIN HARVEY — CROSSFIT</h3>
+          <p class="film-sub"><span class="kr">크로스핏 트레이닝 — 프리덤 애슬레틱</span><span class="mono">0'20" — 2024</span><span class="credit">촬영 — 2인 팀</span></p>
+        </div>
+      </article>
+
+      <article class="film film--s rv" data-video="assets/films/keone_evls.mp4" data-title="KEONE PEARSON — PRAGUE DEBUT">
+        <button class="card-media r45" data-cursor="PLAY" aria-label="키온 피어슨 EVLS 프라하 프로 데뷔 필름 재생">
+          <img src="assets/posters/keone_evls.jpg" alt="EVLS 프라하 프로 무대 위 키온 피어슨" loading="lazy">
+          <video src="assets/previews/keone_evls_p.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+          <span class="card-tag mono">VERTICAL</span>
+        </button>
+        <div class="film-meta">
+          <h3 class="film-title">KEONE — PRAGUE DEBUT</h3>
+          <p class="film-sub"><span class="kr">키온 피어슨 — EVLS 프라하 프로 오픈 데뷔</span><span class="mono">1'49" — 2025</span></p>
+        </div>
+      </article>
+
+      <article class="film film--s film--push rv" data-video="assets/films/choi.mp4" data-title="최두호 — SUPERBOY">
+        <button class="card-media r45" data-cursor="PLAY" aria-label="최두호 숏폼 인터뷰 재생">
+          <img src="assets/posters/choi.jpg" alt="가드를 올린 최두호 — 어두운 체육관" loading="lazy">
+          <video src="assets/previews/choi_p.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+          <span class="card-tag mono">VERTICAL</span>
+        </button>
+        <div class="film-meta">
+          <h3 class="film-title">최두호 — SUPERBOY</h3>
+          <p class="film-sub"><span class="kr">숏폼 인터뷰 — UFC</span><span class="mono">1'14" — 2026</span></p>
+        </div>
+      </article>
+
+      <article class="film film--l rv" data-video="assets/films/movelist.mp4" data-title="MOVELIST × MONSTERZYM">
+        <button class="card-media r169" data-cursor="PLAY" aria-label="무브리스트 몬스터짐 팝업 리캡 재생">
+          <img src="assets/posters/movelist.jpg" alt="무브리스트 팝업 부스 — 블루 라이트" loading="lazy">
+          <video src="assets/previews/movelist_p.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+          <span class="card-tag mono">EVENT FILM</span>
+        </button>
+        <div class="film-meta">
+          <h3 class="film-title">MOVELIST × MONSTERZYM</h3>
+          <p class="film-sub"><span class="kr">팝업 리캡</span><span class="mono">0'49" — 2026</span></p>
+        </div>
+      </article>
+
+      <article class="film film--l rv" data-video="assets/films/hzx.mp4" data-title="허주시엔 × 박재훈 — SESSION">
+        <button class="card-media r169" data-cursor="PLAY" aria-label="허주시엔 × 박재훈 세션 재생">
+          <img src="assets/posters/hzx.jpg" alt="펙덱 머신에서 이를 악문 순간 — 세션 스틸" loading="lazy">
+          <video src="assets/previews/hzx_p.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+          <span class="card-tag mono">TRAINING FILM</span>
+        </button>
+        <div class="film-meta">
+          <h3 class="film-title">허주시엔 × 박재훈 — SESSION</h3>
+          <p class="film-sub"><span class="kr">제로투히어로 — 4 cuts</span><span class="mono">0'15" — 2026</span></p>
+        </div>
+      </article>
+
+      <article class="film film--s rv" data-video="assets/films/party.mp4" data-title="본투윈 — INNER PARTY">
+        <button class="card-media r45" data-cursor="PLAY" aria-label="본투윈 이너파티 리캡 재생">
+          <img src="assets/posters/party.jpg" alt="촛불과 슬라이더 버거가 놓인 파티 테이블 — 불꽃" loading="lazy">
+          <video src="assets/previews/party_p.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+          <span class="card-tag mono">VERTICAL</span>
+        </button>
+        <div class="film-meta">
+          <h3 class="film-title">본투윈 — INNER PARTY</h3>
+          <p class="film-sub"><span class="kr">파티 리캡</span><span class="mono">0'25" — 2025</span></p>
+        </div>
+      </article>
+
+      <article class="film film--h rv" data-video="assets/films/brn.mp4" data-title="BRN — NIGHT OUT" data-credit="촬영 — 2인 팀">
+        <button class="card-media r169" data-cursor="PLAY" aria-label="BRN 어패럴 필름 재생">
+          <img src="assets/posters/brn.jpg" alt="블루 아워 강변 — BRN 어패럴 필름 스틸" loading="lazy">
+          <video src="assets/previews/brn_p.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+          <span class="card-tag mono">APPAREL FILM</span>
+        </button>
+        <div class="film-meta">
+          <h3 class="film-title">BRN — NIGHT OUT</h3>
+          <p class="film-sub"><span class="kr">어패럴 필름 — 블루 아워</span><span class="mono">0'21" — 2025</span><span class="credit">촬영 — 2인 팀</span></p>
+        </div>
+      </article>
+
+      <article class="film film--h rv" data-video="assets/films/sunguk.mp4" data-title="김성욱 — OFFLINE STORE" data-credit="촬영 — 2인 팀">
+        <button class="card-media r169" data-cursor="PLAY" aria-label="김성욱 오프라인 스토어 캠페인 재생">
+          <img src="assets/posters/sunguk.jpg" alt="프리덤 오프라인 스토어 — 후디를 든 손" loading="lazy">
+          <video src="assets/previews/sunguk_p.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+          <span class="card-tag mono">STORE CAMPAIGN</span>
+        </button>
+        <div class="film-meta">
+          <h3 class="film-title">김성욱 — OFFLINE STORE</h3>
+          <p class="film-sub"><span class="kr">스토어 캠페인 — 프리덤 애슬레틱</span><span class="mono">0'20" — 2025</span><span class="credit">촬영 — 2인 팀</span></p>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- 인덱스: 전체 작업 목록 — 행 클릭 시 재생, 호버 시 썸네일 (✏️ EDIT: 자유롭게 추가/삭제) -->
+    <div class="index">
+      <p class="index-head mono rv">INDEX — ALL WORKS<span class="index-note">전체 작업 — 행을 누르면 재생됩니다</span></p>
+
+      <div class="idx-group rv">
+        <p class="idx-group-label mono">CAMPAIGN &amp; FILM</p>
+        <ul class="index-list">
+          <li><button class="idx-btn" data-video="assets/films/hyatt.mp4" data-thumb="assets/idx/hyatt.jpg" data-title="본투윈 × 부산 하얏트 — 러닝 캠페인" data-cursor="PLAY"><span class="idx-t">본투윈 × 부산 하얏트 — 러닝 캠페인</span><span class="idx-c mono">VERTICAL · 0'59"</span><span class="idx-y mono">2026</span></button></li>
+          <li><button class="idx-btn" data-video="assets/films/boxing.mp4" data-thumb="assets/idx/boxing.jpg" data-title="FREEDOM — BOXING" data-cursor="PLAY"><span class="idx-t">FREEDOM — BOXING</span><span class="idx-c mono">VERTICAL · 0'59"</span><span class="idx-y mono">2026</span></button></li>
+          <li><button class="idx-btn" data-video="assets/films/jaehoon_store.mp4" data-thumb="assets/idx/jaehoon_store.jpg" data-title="FREEDOM — 박재훈 스토어 캠페인" data-credit="촬영 — 2인 팀" data-cursor="PLAY"><span class="idx-t">FREEDOM — 박재훈 스토어 캠페인</span><span class="idx-c mono">VERTICAL · 0'34"</span><span class="idx-y mono">2025</span></button></li>
+          <li><button class="idx-btn" data-video="assets/films/hunter.mp4" data-thumb="assets/idx/hunter.jpg" data-title="ZERO TO HERO × HUNTER LABRADA" data-cursor="PLAY"><span class="idx-t">ZERO TO HERO × HUNTER LABRADA</span><span class="idx-c mono">0'40"</span><span class="idx-y mono">2026</span></button></li>
+          <li><button class="idx-btn" data-video="assets/films/zth_samson.mp4" data-thumb="assets/idx/zth_samson.jpg" data-title="ZERO TO HERO — 삼손 컷" data-credit="촬영 — 2인 팀" data-cursor="PLAY"><span class="idx-t">ZERO TO HERO — 삼손 컷</span><span class="idx-c mono">0'26"</span><span class="idx-y mono">2025</span></button></li>
+          <li><button class="idx-btn" data-video="assets/films/zth_jaehoon.mp4" data-thumb="assets/idx/zth_jaehoon.jpg" data-title="ZERO TO HERO — 재훈 컷" data-credit="촬영 — 2인 팀" data-cursor="PLAY"><span class="idx-t">ZERO TO HERO — 재훈 컷</span><span class="idx-c mono">0'28"</span><span class="idx-y mono">2025</span></button></li>
+          <li><button class="idx-btn" data-video="assets/films/zth_keone.mp4" data-thumb="assets/idx/zth_keone.jpg" data-title="ZERO TO HERO — 키온 컷" data-credit="촬영 — 2인 팀" data-cursor="PLAY"><span class="idx-t">ZERO TO HERO — 키온 컷</span><span class="idx-c mono">0'27"</span><span class="idx-y mono">2025</span></button></li>
+          <li><button class="idx-btn" data-video="assets/films/jtm.mp4" data-thumb="assets/idx/jtm.jpg" data-title="정태민 — 트레이닝 필름" data-credit="촬영 — 2인 팀" data-cursor="PLAY"><span class="idx-t">정태민 — 트레이닝 필름</span><span class="idx-c mono">VERTICAL · 0'56"</span><span class="idx-y mono">2025</span></button></li>
+          <li><button class="idx-btn" data-video="assets/films/bonac.mp4" data-thumb="assets/idx/bonac.jpg" data-title="WILLIAM BONAC — 모티베이션" data-credit="촬영 — 2인 팀" data-cursor="PLAY"><span class="idx-t">WILLIAM BONAC — 모티베이션</span><span class="idx-c mono">0'38"</span><span class="idx-y mono">2025</span></button></li>
+        </ul>
+      </div>
+
+      <div class="idx-group rv">
+        <p class="idx-group-label mono">EVENT</p>
+        <ul class="index-list">
+          <li><button class="idx-btn" data-video="assets/films/insiderun.mp4" data-thumb="assets/idx/insiderun.jpg" data-title="본투윈 — INSIDE RUNNING" data-credit="촬영 — 2인 팀" data-cursor="PLAY"><span class="idx-t">본투윈 — INSIDE RUNNING</span><span class="idx-c mono">0'42"</span><span class="idx-y mono">2026</span></button></li>
+          <li><button class="idx-btn" data-video="assets/films/mma.mp4" data-thumb="assets/idx/mma.jpg" data-title="본투윈 — MMA 세미나" data-cursor="PLAY"><span class="idx-t">본투윈 — MMA 세미나</span><span class="idx-c mono">2'13"</span><span class="idx-y mono">2025</span></button></li>
+          <li><button class="idx-btn" data-video="assets/films/superbee.mp4" data-thumb="assets/idx/superbee.jpg" data-title="본투윈 — 이너파티 LIVE (SUPERBEE × UNEDUCATED KID)" data-cursor="PLAY"><span class="idx-t">본투윈 — 이너파티 LIVE (SUPERBEE × UNEDUCATED KID)</span><span class="idx-c mono">VERTICAL · 1'30"</span><span class="idx-y mono">2025</span></button></li>
+        </ul>
+      </div>
+
+      <div class="idx-group rv">
+        <p class="idx-group-label mono">INTERVIEW</p>
+        <ul class="index-list">
+          <li><button class="idx-btn" data-video="assets/films/keone_itv.mp4" data-thumb="assets/idx/keone_itv.jpg" data-title="2025 올림피아 — 키온 인터뷰" data-credit="촬영 — 2인 팀" data-cursor="PLAY"><span class="idx-t">2025 올림피아 — 키온 인터뷰</span><span class="idx-c mono">VERTICAL · 1'32"</span><span class="idx-y mono">2025</span></button></li>
+          <li><button class="idx-btn" data-video="assets/films/diqin.mp4" data-thumb="assets/idx/diqin.jpg" data-title="DIQIN — 숏폼 인터뷰" data-credit="촬영 — 2인 팀" data-cursor="PLAY"><span class="idx-t">DIQIN — 숏폼 인터뷰</span><span class="idx-c mono">VERTICAL · 1'41"</span><span class="idx-y mono">2025</span></button></li>
+        </ul>
+      </div>
+
+      <div class="idx-thumb" id="idxThumb" aria-hidden="true"><img alt=""></div>
+    </div>
+  </section>
+
+  <!-- ───────── 03 STILLS ───────── -->
+  <section class="section" id="stills">
+    <header class="sec-head rv">
+      <p class="sec-num mono">03 — PHOTOGRAPHY</p>
+      <h2 class="sec-title">STILLS</h2>
+      <p class="sec-sub">포토그래피 — 서울 · 프라하 · 라스베이거스 · 보스턴 · 상하이</p>
+    </header>
+
+    <div class="stills">
+      <button class="still st-3 r45 rv" data-cursor="VIEW" data-caption="EVLS PRAGUE PRO — 키온 데뷔"><img src="assets/stills/p01.jpg" alt="EVLS 프라하 프로 백월 앞에서 메달을 든 키온 피어슨" loading="lazy"></button>
+      <button class="still st-3 r45 rv" data-cursor="VIEW" data-caption="ON STAGE"><img src="assets/stills/p02.jpg" alt="무대 위 백 더블 바이셉스 — 스테이지 그래픽" loading="lazy"></button>
+      <button class="still st-2 r45 rv" data-cursor="VIEW" data-caption="BARBERSHOP"><img src="assets/stills/p03.jpg" alt="체커 바닥 바버샵에서 헤어컷 중인 선수" loading="lazy"></button>
+      <button class="still st-2 r45 rv" data-cursor="VIEW" data-caption="OLYMPIA 60TH"><img src="assets/stills/p04.jpg" alt="올림피아 60주년 바시티 재킷 — 흑백 포트레이트" loading="lazy"></button>
+      <button class="still st-2 r45 rv" data-cursor="VIEW" data-caption="PREP"><img src="assets/stills/p05.jpg" alt="니 슬리브를 조정하는 선수" loading="lazy"></button>
+      <button class="still st-2 r45 rv" data-cursor="VIEW" data-caption="CARDILLO'S WORLD"><img src="assets/stills/p06.jpg" alt="호숫가 야외 짐 — 시티드 케이블 로우" loading="lazy"></button>
+      <button class="still st-2 r45 rv" data-cursor="VIEW" data-caption="CARDILLO'S WORLD"><img src="assets/stills/p07.jpg" alt="호숫가 프리처 컬 — 물 붓는 순간" loading="lazy"></button>
+      <button class="still st-2 r45 rv" data-cursor="VIEW" data-caption="EXPO STAGE"><img src="assets/stills/p08.jpg" alt="엑스포 무대 위 더블 바이셉스" loading="lazy"></button>
+      <button class="still st-3 r45 rv" data-cursor="VIEW" data-caption="FREEDOM"><img src="assets/stills/p09.jpg" alt="프리덤 티셔츠를 입고 선 선수 전신" loading="lazy"></button>
+      <button class="still st-3 r45 rv" data-cursor="VIEW" data-caption="IRON"><img src="assets/stills/p10.jpg" alt="체스트 프레스 클로즈업 — 흑백" loading="lazy"></button>
+      <button class="still st-2 r45 rv" data-cursor="VIEW" data-caption="60TH VARSITY"><img src="assets/stills/p11.jpg" alt="바시티 재킷 사이드 프로필 — 흑백" loading="lazy"></button>
+      <button class="still st-2 r45 rv" data-cursor="VIEW" data-caption="VARSITY — FULL"><img src="assets/stills/p12.jpg" alt="바시티 재킷 풀바디 — 흑백" loading="lazy"></button>
+      <button class="still st-2 r45 rv" data-cursor="VIEW" data-caption="CARDILLO'S WORLD"><img src="assets/stills/p13.jpg" alt="호숫가 야외 짐 전경 — 가을 단풍" loading="lazy"></button>
+      <button class="still st-4 r32 rv" data-cursor="VIEW" data-caption="SEMINAR"><img src="assets/stills/p14.jpg" alt="세미나 객석 와이드 — 본투윈" loading="lazy"></button>
+      <button class="still st-2 r45 rv" data-cursor="VIEW" data-caption="PRAGUE"><img src="assets/stills/p15.jpg" alt="EVLS 프라하 — 호텔 카펫 위 전신" loading="lazy"></button>
+    </div>
+  </section>
+
+  <!-- ───────── 04 ABOUT ───────── -->
+  <section class="section" id="about">
+    <header class="sec-head rv">
+      <p class="sec-num mono">04 — PROFILE</p>
+      <h2 class="sec-title">ABOUT</h2>
+      <p class="sec-sub">김기현 — 필름메이커</p>
+    </header>
+
+    <div class="about">
+      <figure class="about-photo rv">
+        <!-- ✏️ EDIT: 본인 프로필 사진으로 교체 추천 (assets/stills/about.jpg) -->
+        <img src="assets/stills/about.jpg" alt="덤벨 랙 사이 — 흑백 짐 스틸" loading="lazy">
+        <figcaption class="mono">KIM KIHYUN — 김기현</figcaption>
+      </figure>
+
+      <div class="about-body">
+        <!-- ✏️ EDIT: 소개 문구 -->
+        <p class="about-lead rv">스포츠가 가진 무게를 그대로 화면에 옮깁니다. 보디빌딩과 피지크를 중심으로 — 다큐멘터리, 브랜드 캠페인, 소셜 버티컬까지 — 훈련장과 무대에서 만들어지는 순간들을 기록해 왔습니다.</p>
+        <p class="about-para rv">2024년 9월 Fadein Studio에 팀원으로 합류해, Freedom Athletic의 다큐멘터리 시리즈(더 워리어스 · 팀워크 · 레거시)를 만들었고, 미스터 올림피아와 EVLS 프라하 프로 현장에서 세계 최정상 애슬리트들을 카메라에 담았습니다. 국내에서는 제로투히어로 · 본투윈 · 몬스터짐 등과 함께 캠페인과 대회, 세미나의 순간을 만들어 왔습니다. 모든 작품에서 기획부터 연출, 촬영, 편집, 컬러 그레이딩까지 전 과정을 다룹니다.</p>
+
+        <div class="about-cols rv">
+          <div>
+            <p class="about-label mono">FEATURED ATHLETES</p>
+            <!-- ✏️ EDIT: 촬영한 선수 목록 — 확인 후 수정 -->
+            <ul class="about-list">
+              <li>SAMSON DAUDA</li>
+              <li>박재훈</li>
+              <li>KEONE PEARSON</li>
+              <li>김성욱</li>
+              <li>최두호 — UFC</li>
+            </ul>
+          </div>
+        </div>
+
+        <ul class="services rv">
+          <li><em class="mono">01</em><strong>DIRECTING</strong><span>기획 · 연출</span></li>
+          <li><em class="mono">02</em><strong>CINEMATOGRAPHY</strong><span>촬영 — 4K · 시네마 룩</span></li>
+          <li><em class="mono">03</em><strong>EDITING</strong><span>편집</span></li>
+          <li><em class="mono">04</em><strong>COLOR</strong><span>컬러 그레이딩</span></li>
+          <li><em class="mono">05</em><strong>VERTICAL</strong><span>소셜 · 버티컬 최적화</span></li>
+        </ul>
+
+        <p class="about-facts mono rv">FADEIN STUDIO (2024.09 —) · BASED IN SEOUL — AVAILABLE WORLDWIDE</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── 05 OUTRO ─────────
+       ✏️ EDIT: 독립/영업 시작하면 여기에 연락 문구와 이메일 버튼을 다시 넣으세요 (이전 버전은 git 없이도 제가 복원 가능) -->
+  <section class="section section--contact" id="contact">
+    <p class="sec-num mono rv">05 — OUTRO</p>
+    <h2 class="contact-title rv"><span>MAKE IT</span><span>HEAVY<i class="red">.</i></span></h2>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year">2026</span> KIM KIHYUN — 김기현</p>
+    <a href="#top" class="mono" data-cursor-skip>TOP&nbsp;↑</a>
+  </footer>
+
+  <!-- ───────── LIGHTBOX ───────── -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="작품 보기">
+    <button class="lb-close mono" id="lbClose">CLOSE&nbsp;✕</button>
+    <button class="lb-nav lb-prev mono" id="lbPrev" aria-label="이전">←</button>
+    <button class="lb-nav lb-next mono" id="lbNext" aria-label="다음">→</button>
+    <div class="lb-stage" id="lbStage"></div>
+    <p class="lb-caption mono" id="lbCaption"></p>
+  </div>
+
+  <div class="toast mono" id="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
