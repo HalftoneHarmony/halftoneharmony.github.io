@@ -667,6 +667,11 @@ body.loaded .line-2 .line-in { transition-delay: 0.12s; }
   padding-block: 7px;
   border-top: 1px solid var(--line);
 }
+.about-list--split {
+  columns: 2;
+  column-gap: 28px;
+}
+.about-list--split li { break-inside: avoid; }
 .services { list-style: none; margin-bottom: clamp(28px, 3vw, 44px); }
 .services li {
   display: grid;
