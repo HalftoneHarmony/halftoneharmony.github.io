@@ -914,8 +914,9 @@ body.lb-lock { overflow: hidden; }
   .film--l, .film--s, .film--h { grid-column: span 6; }
   .film--end { grid-column: span 12; }
   .film--push { margin-top: 0; }
-  .about-photo { grid-column: span 12; position: static; max-width: 440px; }
-  .about-body { grid-column: span 12; }
+  .about { grid-template-columns: 1fr; gap: 40px; }
+  .about-photo { grid-column: auto; position: static; max-width: 440px; }
+  .about-body { grid-column: auto; }
 }
 
 @media (max-width: 768px) {
