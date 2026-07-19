@@ -402,6 +402,60 @@
   <section class="section section--contact" id="contact">
     <p class="sec-num mono rv">05 — OUTRO</p>
     <h2 class="contact-title rv"><span>MAKE IT</span><span>HEAVY<i class="red">.</i></span></h2>
+
+    <!-- ✏️ EDIT: 문의 폼 — 지금은 숨김 상태. 독립 시 공개 절차 (2단계):
+         1) 바로 아래 줄의 hidden 을 지운다 → <div class="contact-form-wrap">
+         2) form 태그의 action 속성에서 FORM_ID를 실제 값으로 교체
+            (formspree.io 무료 가입 → New Form 만들면 https://formspree.io/f/xxxxxxx 주소를 줌
+             — 서버 없이 폼 내용이 이메일로 도착함)
+         제출 후 이동할 감사 페이지가 필요하면 그때 요청할 것. -->
+    <div class="contact-form-wrap rv" hidden>
+      <p class="cf-intro">프로젝트를 알려주시면 <strong>48시간 안에</strong> 구성과 견적 방향을 회신드립니다.</p>
+      <form class="contact-form" action="https://formspree.io/f/FORM_ID" method="POST">
+        <div class="cf-grid">
+          <label class="cf-field">
+            <span class="cf-label mono">NAME / COMPANY</span>
+            <input type="text" name="name" required autocomplete="name" placeholder="이름 · 소속">
+          </label>
+          <label class="cf-field">
+            <span class="cf-label mono">EMAIL</span>
+            <input type="email" name="_replyto" required autocomplete="email" placeholder="회신받을 이메일">
+          </label>
+          <label class="cf-field">
+            <span class="cf-label mono">PROJECT</span>
+            <select name="project_type" required>
+              <option value="" disabled selected>프로젝트 유형 선택</option>
+              <option>캠페인 필름</option>
+              <option>퍼포먼스 광고 소재</option>
+              <option>선수 캠페인</option>
+              <option>이벤트 · 대회 리캡</option>
+              <option>기타</option>
+            </select>
+          </label>
+          <label class="cf-field">
+            <span class="cf-label mono">BUDGET</span>
+            <select name="budget">
+              <option value="" disabled selected>예산 범위 (VAT 별도)</option>
+              <option>미정 — 제안 받고 싶어요</option>
+              <option>300만 원 이하</option>
+              <option>300 ~ 600만 원</option>
+              <option>600 ~ 1,000만 원</option>
+              <option>1,000만 원 이상</option>
+            </select>
+          </label>
+          <label class="cf-field cf-field--full">
+            <span class="cf-label mono">TIMELINE</span>
+            <input type="text" name="timeline" placeholder="희망 일정 (예: 9월 초 촬영 · 10월 런칭)">
+          </label>
+          <label class="cf-field cf-field--full">
+            <span class="cf-label mono">BRIEF</span>
+            <textarea name="message" rows="5" required placeholder="목적 · 타깃과 채널 · 참고 레퍼런스 링크"></textarea>
+          </label>
+        </div>
+        <input type="text" name="_gotcha" class="cf-gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="cf-submit mono" type="submit" data-cursor="SEND">SEND INQUIRY<span aria-hidden="true">&nbsp;↗</span></button>
+      </form>
+    </div>
   </section>
 
   <footer class="footer">

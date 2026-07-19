@@ -700,6 +700,63 @@ body.loaded .line-2 .line-in { transition-delay: 0.12s; }
   text-align: center;
   padding-bottom: clamp(70px, 10vh, 120px);
 }
+
+/* 문의 폼 — 현재 HTML에서 hidden. 독립 시 공개 (index.html의 ✏️ EDIT 참고) */
+.contact-form-wrap {
+  max-width: 720px;
+  margin: clamp(44px, 7vh, 84px) auto 0;
+  text-align: left;
+}
+.cf-intro { color: var(--mut); font-size: 14.5px; margin-bottom: 34px; }
+.cf-intro strong { color: var(--ink); font-weight: 600; }
+.cf-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 36px;
+}
+.cf-field { display: flex; flex-direction: column; gap: 9px; }
+.cf-field--full { grid-column: 1 / -1; }
+.cf-label { font-size: 11px; letter-spacing: 0.14em; color: var(--red); }
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 15px;
+  padding: 10px 2px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder { color: rgba(139, 135, 127, 0.65); }
+.contact-form select:invalid,
+.contact-form select:has(option[value=""]:checked) { color: rgba(139, 135, 127, 0.65); }
+.contact-form select option { background: var(--bg); color: var(--ink); }
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus { border-color: var(--red); }
+.contact-form textarea { resize: vertical; min-height: 120px; }
+.cf-gotcha { position: absolute; left: -9999px; height: 0; opacity: 0; }
+.cf-submit {
+  margin-top: 40px;
+  padding: 15px 34px;
+  background: transparent;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  font-size: 12.5px;
+  letter-spacing: 0.14em;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+.cf-submit:hover,
+.cf-submit:focus-visible { background: var(--red); border-color: var(--red); color: #fff; }
+@media (max-width: 768px) {
+  .cf-grid { grid-template-columns: 1fr; gap: 26px; }
+}
 .section--contact .sec-num { margin-bottom: clamp(24px, 4vh, 48px); }
 .contact-title {
   font-family: var(--disp);
