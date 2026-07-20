@@ -1,3 +1,5 @@
+# GitHub Pages에서는 무동작 — Jekyll이 _파일을 배포에서 제외하고, 실제 응답은 일괄 max-age=600
+# Netlify/Cloudflare Pages 이전 시에만 적용됨 (배포가이드.md 대안 경로용으로 유지)
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 /*.html

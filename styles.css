@@ -74,6 +74,19 @@ button {
 
 .red { color: var(--red); font-style: normal; }
 
+/* ── 스킵 링크 — 키보드 포커스 시에만 노출 ── */
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: var(--pad);
+  z-index: 130;
+  background: var(--red);
+  color: #fff;
+  padding: 10px 16px;
+}
+.skip-link:focus { top: 12px; }
+#main:focus { outline: none; }
+
 /* ── 스크롤 리빌 ─────────────────────────── */
 .rv {
   opacity: 0;
@@ -188,14 +201,16 @@ button {
   background: rgba(7, 7, 8, 0.97);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* 센터링은 .menu-list의 auto 마진이 담당 — 낮은 뷰포트(가로 모드)에서 넘치면 스크롤 */
+  justify-content: flex-start;
+  overflow-y: auto;
   padding: var(--pad);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s var(--ease), visibility 0.4s;
 }
 body.menu-open .menu-overlay { opacity: 1; visibility: visible; }
-.menu-list { display: flex; flex-direction: column; gap: 6px; }
+.menu-list { display: flex; flex-direction: column; gap: 6px; margin-block: auto; }
 .menu-list a {
   font-family: var(--disp);
   font-weight: 900;
@@ -216,6 +231,10 @@ body.menu-open .menu-list a:nth-child(2) { transition-delay: 0.06s; }
 body.menu-open .menu-list a:nth-child(3) { transition-delay: 0.12s; }
 body.menu-open .menu-list a:nth-child(4) { transition-delay: 0.18s; }
 .menu-foot { position: absolute; bottom: 32px; color: var(--mut); }
+/* 가로 모드 폰 — 메뉴가 뷰포트보다 길어지는 구간에서는 흐름 배치로 겹침 방지 */
+@media (max-height: 480px) {
+  .menu-foot { position: static; margin-top: 28px; }
+}
 
 /* ── HERO ────────────────────────────────── */
 .hero {
@@ -304,7 +323,8 @@ body.loaded .line-2 .line-in { transition-delay: 0.12s; }
   padding-top: clamp(16px, 2.5vh, 24px);
 }
 .hero-ko { font-size: 15px; color: var(--mut); line-height: 1.75; }
-.hero-scroll { color: var(--ink); white-space: nowrap; padding-block: 4px; }
+/* 터치 타깃 확장 — 패딩+음수 마진 보상으로 시각 위치 유지 */
+.hero-scroll { color: var(--ink); white-space: nowrap; padding-block: 12px; margin-block: -8px; }
 .hero-scroll span { display: inline-block; animation: nudge 2s ease-in-out infinite; }
 @keyframes nudge { 50% { transform: translateY(4px); } }
 
@@ -378,7 +398,7 @@ body.loaded .line-2 .line-in { transition-delay: 0.12s; }
   padding-top: 12px;
   margin-top: 10px;
 }
-.film-sub .credit { color: var(--mut); font-size: 11.5px; opacity: 0.85; }
+.film-sub .credit { color: var(--mut); font-size: 11.5px; }
 
 /* ── FILMS ───────────────────────────────── */
 .films {
@@ -422,8 +442,6 @@ body.loaded .line-2 .line-in { transition-delay: 0.12s; }
 }
 .card-media video { opacity: 0; }
 .card-media.playing video { opacity: 1; }
-.film:hover .card-media img,
-.film:hover .card-media video,
 .card-media:focus-visible img { transform: scale(1.045); }
 .card-tag {
   position: absolute;
@@ -453,7 +471,6 @@ body.loaded .line-2 .line-in { transition-delay: 0.12s; }
   text-transform: uppercase;
   transition: color 0.3s;
 }
-.film:hover .film-title { color: #fff; }
 .film-sub {
   display: flex;
   flex-direction: column;
@@ -497,7 +514,6 @@ body.loaded .line-2 .line-in { transition-delay: 0.12s; }
   padding: 15px 2px;
   transition: background 0.3s, padding-left 0.3s;
 }
-.idx-btn:hover { background: rgba(237, 234, 228, 0.028); padding-left: 12px; }
 .idx-t {
   font-family: var(--disp);
   font-weight: 700;
@@ -507,7 +523,6 @@ body.loaded .line-2 .line-in { transition-delay: 0.12s; }
   letter-spacing: 0.01em;
   transition: color 0.3s;
 }
-.idx-btn:hover .idx-t { color: #fff; }
 .idx-c { color: var(--mut); }
 .idx-y { color: var(--mut); min-width: 44px; text-align: right; }
 
@@ -556,7 +571,6 @@ body.loaded .line-2 .line-in { transition-delay: 0.12s; }
   inset: 0;
   transition: transform 1.1s var(--ease), filter 0.6s;
 }
-.still:hover img { transform: scale(1.05); }
 .still::before {
   content: "";
   display: block;
@@ -617,7 +631,6 @@ body.loaded .line-2 .line-in { transition-delay: 0.12s; }
   object-fit: cover;
   transition: transform 1.1s var(--ease);
 }
-.dstill:hover img { transform: scale(1.05); }
 .dstill::after {
   content: "";
   position: absolute;
@@ -683,7 +696,6 @@ body.loaded .line-2 .line-in { transition-delay: 0.12s; }
   transition: padding-left 0.3s;
 }
 .services li:last-child { border-bottom: 1px solid var(--line); }
-.services li:hover { padding-left: 10px; }
 .services em { color: var(--red); font-style: normal; }
 .services strong {
   font-family: var(--disp);
@@ -819,7 +831,8 @@ body.loaded .line-2 .line-in { transition-delay: 0.12s; }
   flex-wrap: wrap;
 }
 .footer .mono { color: var(--mut); }
-.footer a { color: var(--ink); }
+/* 터치 타깃 확장 — 음수 마진 보상으로 시각 위치 유지 */
+.footer a { color: var(--ink); padding: 12px 10px; margin: -12px -10px; }
 
 /* ── LIGHTBOX ────────────────────────────── */
 .lightbox {
@@ -845,7 +858,9 @@ body.loaded .line-2 .line-in { transition-delay: 0.12s; }
   z-index: 2;
   letter-spacing: 0.14em;
   color: var(--ink);
-  padding: 8px 4px;
+  /* 터치 타깃 확장 — 음수 마진 보상으로 시각 위치 유지 */
+  padding: 12px 10px;
+  margin: -4px -6px;
 }
 .lb-nav {
   position: absolute;
@@ -872,12 +887,26 @@ body.loaded .line-2 .line-in { transition-delay: 0.12s; }
   .lightbox.has-nav .lb-caption { margin-bottom: 70px; }
 }
 .lb-stage {
+  position: relative;
   width: min(1400px, 100%);
   max-height: 82vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+/* 라이트박스 로딩 스피너 — 대용량 mp4 첫 프레임 전 피드백 */
+.lightbox.loading .lb-stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 34px; height: 34px;
+  border: 2px solid var(--line);
+  border-top-color: var(--red);
+  border-radius: 50%;
+  animation: lbSpin 0.8s linear infinite;
+}
+@keyframes lbSpin { to { transform: rotate(360deg); } }
 .lb-stage video,
 .lb-stage iframe,
 .lb-stage img {
@@ -948,7 +977,8 @@ body.loaded .line-2 .line-in { transition-delay: 0.12s; }
 }
 .lb-act:hover { background: var(--red); border-color: var(--red); color: var(--bg); }
 .lb-caption { margin-top: 18px; color: var(--mut); letter-spacing: 0.14em; }
-body.lb-lock { overflow: hidden; }
+/* iOS 사파리 배경 스크롤 차단 — body 고정 패턴 (script.js가 top 오프셋으로 위치 보존) */
+body.lb-lock { position: fixed; width: 100%; overflow: hidden; }
 
 /* ── TOAST ───────────────────────────────── */
 .toast {
@@ -966,11 +996,25 @@ body.lb-lock { overflow: hidden; }
 }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
 
+/* ═══════════ HOVER 가능 기기 전용 — 터치에서 :hover 고착 방지 ═══════════ */
+@media (hover: hover) {
+  .film:hover .card-media img,
+  .film:hover .card-media video { transform: scale(1.045); }
+  .film:hover .film-title { color: #fff; }
+  .idx-btn:hover { background: rgba(237, 234, 228, 0.028); padding-left: 12px; }
+  .idx-btn:hover .idx-t { color: #fff; }
+  .still:hover img { transform: scale(1.05); }
+  .dstill:hover img { transform: scale(1.05); }
+  .services li:hover { padding-left: 10px; }
+}
+
 /* ═══════════ RESPONSIVE ═══════════ */
 @media (max-width: 1024px) {
   .film--l, .film--s, .film--h { grid-column: span 6; }
   .film--end { grid-column: span 12; }
   .film--push { margin-top: 0; }
+  /* 좁은 카드에서 크레딧 공백 줄바꿈 허용 — 태블릿 구간 크레딧 오버플로 방지 */
+  .film-sub { flex-shrink: 1; min-width: 0; }
   .about { grid-template-columns: 1fr; gap: 40px; }
   .about-photo { grid-column: auto; position: static; max-width: 440px; }
   .about-body { grid-column: auto; }
@@ -1004,6 +1048,8 @@ body.lb-lock { overflow: hidden; }
   .rv { opacity: 1; transform: none; transition: none; }
   .hero-name .line-in { transform: none; transition: none; }
   .hero-art { animation: none; }
+  .hero-video { display: none; }
+  .lightbox.loading .lb-stage::before { animation-duration: 2s; }
   .marquee-track { animation: none; }
   .dot, .hero-scroll span { animation: none; }
   .card-media img, .card-media video, .still img { transition: none; }

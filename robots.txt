@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://halftoneharmony.github.io/sitemap.xml
