@@ -50,7 +50,7 @@ body::after {
 
 ::selection { background: var(--red); color: var(--bg); }
 
-img, video { display: block; max-width: 100%; }
+img, video { display: block; max-width: 100%; height: auto; }
 
 a { color: inherit; text-decoration: none; }
 
@@ -651,7 +651,7 @@ body.loaded .line-2 .line-in { transition-delay: 0.12s; }
   position: sticky;
   top: 96px;
 }
-.about-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.about-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
 .about-photo figcaption { color: var(--mut); margin-top: 12px; }
 .about-body { grid-column: 7 / span 6; }
 .about-lead {
@@ -1016,7 +1016,7 @@ body.lb-lock { position: fixed; width: 100%; overflow: hidden; }
   /* 좁은 카드에서 크레딧 공백 줄바꿈 허용 — 태블릿 구간 크레딧 오버플로 방지 */
   .film-sub { flex-shrink: 1; min-width: 0; }
   .about { grid-template-columns: 1fr; gap: 40px; }
-  .about-photo { grid-column: auto; position: static; max-width: 440px; }
+  .about-photo { grid-column: auto; position: static; max-width: 620px; }
   .about-body { grid-column: auto; }
 }
 
